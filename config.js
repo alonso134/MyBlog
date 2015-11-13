@@ -11,16 +11,16 @@ config = {
     // When running Ghost in the wild, use the production environment.
     // Configure your URL and mail settings here
     production: {
-        url: 'http://magickaichen.com/',
+        url: 'http://magickaichen.com',
         mail: {},
         database: {
             client: 'mysql',
             connection: {
-               	host	 : 'localhost',
-		user	 : 'root',
-		password : 'Alonso-134',
-		database : 'ghost',
-		charset  : 'utf8'
+            host: 'localhost',
+            user: 'root',
+            password: 'Alonso-134',
+            database: 'ghost',
+            charset : 'utf8'
             },
             debug: false
         },
@@ -35,7 +35,7 @@ config = {
     development: {
         // The url to use when providing links to the site, E.g. in RSS and email.
         // Change this to your Ghost blog's published URL.
-        url: 'http://localhost:2368',
+        url: 'http://magickaichen.com',
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
@@ -55,9 +55,15 @@ config = {
         // #### Database
         // Ghost supports sqlite3 (default), MySQL & PostgreSQL
         database: {
-            client: 'sqlite3',
+            client: 'mysql',
             connection: {
-                filename: path.join(__dirname, '/content/data/ghost-dev.db')
+                client: 'mysql',
+                connection: {
+                host: 'localhost',
+                user: 'root',
+                password: 'Alonso-134',
+                database: 'ghost',
+                charset : 'utf8'
             },
             debug: false
         },
